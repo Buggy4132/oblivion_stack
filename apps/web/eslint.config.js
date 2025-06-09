@@ -9,8 +9,11 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const config = [
+export default [
   ...compat.extends("next/core-web-vitals", "plugin:@typescript-eslint/recommended"),
+  {
+    ignores: ["node_modules/**", ".next/**", "public/**"],
+  },
   {
     files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
     rules: {
@@ -20,8 +23,3 @@ const config = [
     },
   },
 ];
-
-export default {
-  ignores: ["node_modules/**", ".next/**", "public/**"],
-  overrides: config,
-};
