@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import Head from "next/head"; // Removed: Not needed in app/layout.tsx
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +24,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* Head component removed. Metadata is handled via the exported metadata object in app/layout.tsx */}
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
