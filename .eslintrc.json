@@ -2,11 +2,22 @@
   "extends": [
     "next",
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
   ],
+  "plugins": ["@typescript-eslint", "react-hooks", "jsx-a11y"],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
   "rules": {
-    // add your custom rules here if needed
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"],
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
