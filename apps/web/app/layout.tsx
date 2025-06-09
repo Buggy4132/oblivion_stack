@@ -23,10 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-      </body>
-    </html>
+   <html lang="en">
+  <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    {children}
+  </body>
+</html>
+
   );
 }
+//         <a
+//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+//           href="
