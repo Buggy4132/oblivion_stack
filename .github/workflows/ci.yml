@@ -24,13 +24,10 @@ jobs:
           cache: "pnpm"
 
       - run: pnpm install --frozen-lockfile
-        working-directory: ./apps/web
 
       - run: pnpm lint
-        working-directory: ./apps/web
 
       - run: pnpm type-check
-        working-directory: ./apps/web
 
   build:
     runs-on: ubuntu-latest
@@ -48,7 +45,5 @@ jobs:
           cache: "pnpm"
 
       - run: pnpm install --frozen-lockfile
-        working-directory: ./apps/web
 
       - run: pnpm build
-        working-directory: ./apps/web
